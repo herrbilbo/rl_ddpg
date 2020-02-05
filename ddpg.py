@@ -81,7 +81,7 @@ class ddpg:
         self.critic = critic(self.state_dim, self.action_dim).to(self.device)
         self.actor = actor(self.state_dim, self.action_dim).to(self.device)
         self.critic_optimizer = optim.Adam(self.critic.parameters(), lr=critic_lr)
-        self.actor_optimizer  = optim.Adam(self.actor.parameters(), lr=actor_lr) 
+        self.actor_optimizer = optim.Adam(self.actor.parameters(), lr=actor_lr) 
         
         self.critic_target = critic(self.state_dim, self.action_dim).to(self.device)
         self.actor_target = actor(self.state_dim, self.action_dim).to(self.device)
