@@ -12,7 +12,7 @@ if __name__ == "__main__":
     state_dim = 2
     action_dim = 1
 
-    seed = 228
+    seed = 239
     env.seed(seed)
     torch.manual_seed(seed)
     np.random.seed(seed)
